@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="RestAssuredEmployeeSuite" verbose="1">
+    <test name="SmokeTests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hrms.api.tests.AuthTests"/>
+            <class name="com.hrms.api.tests.EmployeeCrudTests"/>
+        </classes>
+    </test>
+
+    <test name="RegressionTests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hrms.api.tests.AuthTests"/>
+            <class name="com.hrms.api.tests.EmployeeCrudTests"/>
+        </classes>
+    </test>
+
+    <test name="NegativeTests">
+        <groups>
+            <run>
+                <include name="negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hrms.api.tests.AuthTests"/>
+            <class name="com.hrms.api.tests.EmployeeCrudTests"/>
+        </classes>
+    </test>
+</suite>
